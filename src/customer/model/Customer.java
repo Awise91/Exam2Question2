@@ -14,7 +14,9 @@ public class Customer {
 	private final ChoiceBox State;
 	private final StringProperty Zip;
 	
-	public Customer(StringProperty firstName, StringProperty middleInit,
+
+
+		public Customer(StringProperty firstName, StringProperty middleInit,
 			StringProperty lastName, RadioButton gender,
 			StringProperty address, StringProperty city, ChoiceBox state,
 			StringProperty zip) {
@@ -29,7 +31,10 @@ public class Customer {
 		Zip = zip;
 	}
 
-	public String getFirstName() {
+		// TODO Auto-generated constructor stub
+	
+
+	public StringProperty getFirstName() {
 		return FirstName;
 	}
 

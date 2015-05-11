@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="customer.view.customerOverViewController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.view.customerController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -34,7 +33,7 @@
                   <TextField fx:id="AddressField" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <TextField fx:id="CityField" text="City" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField fx:id="ZipField" text="Zipcode" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <ChoiceBox fx:id="StateField" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <ChoiceBox fx:id="States" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <VBox prefHeight="40.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <RadioButton fx:id="GenderButton" mnemonicParsing="false" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -45,14 +44,14 @@
                         <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$Gender" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                   </VBox>
-                  <Label prefHeight="27.0" prefWidth="160.0" text="First Name" />
-                  <Label text="Middle Initial" GridPane.rowIndex="1" />
-                  <Label text="Last Name" GridPane.rowIndex="2" />
+                  <Label fx:id="FirstName" prefHeight="27.0" prefWidth="160.0" text="First Name" />
+                  <Label fx:id="MidInit" text="Middle Initial" GridPane.rowIndex="1" />
+                  <Label fx:id="LastName" text="Last Name" GridPane.rowIndex="2" />
                   <Label text="Gender" GridPane.rowIndex="3" />
-                  <Label text="Address" GridPane.rowIndex="4" />
-                  <Label text="City" GridPane.rowIndex="5" />
-                  <Label text="State" GridPane.rowIndex="6" />
-                  <Label text="Zipcode" GridPane.rowIndex="7" />
+                  <Label fx:id="Address" text="Address" GridPane.rowIndex="4" />
+                  <Label fx:id="City" text="City" GridPane.rowIndex="5" />
+                  <Label fx:id="State" text="State" GridPane.rowIndex="6" />
+                  <Label fx:id="Zip" text="Zipcode" GridPane.rowIndex="7" />
                </children>
             </GridPane>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="14.0" prefHeight="39.0" prefWidth="600.0" text="Customer Details" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -60,6 +59,13 @@
                   <Font size="28.0" />
                </font>
             </Label>
+            <SplitMenuButton layoutX="-12.0" layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#newControl" text="New" />
+                <MenuItem mnemonicParsing="false" onAction="#saveAsControl" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#openControl" text="Open" />
+              </items>
+            </SplitMenuButton>
          </children>
       </AnchorPane>
    </children>
